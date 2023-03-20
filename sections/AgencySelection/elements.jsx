@@ -8,7 +8,6 @@ export const StyledContainer = styled(({ height, ...props }) => <SectionContaine
   justify-content: center;
   width: 100%;
   height: auto;
-  padding: 0 20px 0 20px;
 `;
 
 export const StyledTitle = styled((props) => <SectionHeading {...props} />)`
