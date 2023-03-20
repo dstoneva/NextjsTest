@@ -8,6 +8,8 @@ export const StyledCardWrapper = styled(({ ...props }) => <div {...props} />)`
   margin-right: ${(props) => props.marginRight}px;
   width: calc(100% - ${(props) => props.marginRight}px);
   padding: 10px 30px 10px 30px;
+  cursor: default;
+  
   &:hover,
   &:focus,
   &:active {
