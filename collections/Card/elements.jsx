@@ -29,3 +29,13 @@ export const StyledCardText = styled(({ ...props }) => <div {...props} />)`
   font-size: 16px;
   font-family: Poppins;
 `;
+
+export const StyledCardImage = styled.img.attrs(({ ...props }) => ({
+    width: props.width || "45px",
+    height: props.height || "45px"
+  }))`
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
+    margin-left: ${(props) => (props.position === "right" ? "30px" : 0)};
+    margin-right: ${(props) => (props.position === "left" ? "30px" : 0)};
+  `;
