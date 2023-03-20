@@ -18,24 +18,16 @@ export const StyledCardWrapper = styled(({ ...props }) => <div {...props} />)`
 
   &:hover .CardHeading {
     text-decoration: underline;
-    color: ${({ theme }) => theme.blue};
+    color: ${({ theme }) => theme.main};
   }
-`;
-
-export const StyledCardImage = styled.img.attrs(({ ...props }) => ({
-  width: props.width || "40px",
-  height: props.height || "40px"
-}))`
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
-  margin-left: ${(props) => (props.position === "right" ? "30px" : 0)};
-  margin-right: ${(props) => (props.position === "left" ? "30px" : 0)};
 `;
 
 export const StyledCardTextWrapper = styled(({ ...props }) => <div {...props} />)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-left: ${(props) => (props.position === "left" ? "30px" : 0)};
+  margin-right: ${(props) => (props.position === "right" ? "30px" : 0)};
 `;
 
 export const StyledCardHeading = styled(({ ...props }) => <h2 {...props} />)`
@@ -57,4 +49,11 @@ export const StyledCardText = styled(({ ...props }) => <div {...props} />)`
   @media screen and (max-width: 768px) {
     font-size: 0.875rem;
   }
+`;
+
+export const StyledImageContainer = styled(({ ...props }) => <div {...props} />)`
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+  width: 100%;
+  height: 100%;
 `;
