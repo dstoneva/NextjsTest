@@ -8,7 +8,6 @@ export const StyledContainer = styled(({ height, ...props }) => <SectionContaine
   justify-content: center;
   width: 100%;
   height: auto;
-  margin: 2rem 0 2rem;
   padding: 0 20px 0 20px;
 `;
 
@@ -48,7 +47,7 @@ export const StyledSectionContentContainer = styled(({ ...props }) => <SectionCo
   margin-top: 2rem;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
   background: url("/img/background.png") no-repeat;
   background-size: contain;
   @media screen and (max-width: 1024px) {
@@ -68,5 +67,5 @@ export const StyledCardsContainer = styled(({ ...props }) => <div {...props} />)
   justify-content: center;
   align-items: center;
   max-width: 450px;
-  margin: 1.25rem;
+  gap: 2rem;
 `;

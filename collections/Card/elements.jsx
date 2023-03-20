@@ -5,8 +5,8 @@ export const StyledCardWrapper = styled(({ ...props }) => <div {...props} />)`
   align-items: center;
   border-radius: 6px;
   background: ${({ theme }) => theme.grayF4};
-  max-width: 100%;
-  margin: 1rem;
+  margin-right: ${(props) => props.marginRight}px;
+  width: calc(100% - ${(props) => props.marginRight}px);
   padding: 10px 30px 10px 30px;
   &:hover,
   &:focus,

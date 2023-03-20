@@ -21,7 +21,8 @@ const cardsData = [
     ),
     imageSrc: "/img/icons/edit-tools.png",
     imageAlt: "Tools icon",
-    imagePosition: "left"
+    imagePosition: "left",
+    marginRight: 60
   },
   {
     heading: "Search",
@@ -32,7 +33,8 @@ const cardsData = [
     ),
     imageSrc: "/img/icons/business.png",
     imageAlt: "Business icon",
-    imagePosition: "left"
+    imagePosition: "left",
+    marginRight: 40
   },
   {
     heading: "Pitch",
@@ -43,7 +45,8 @@ const cardsData = [
     ),
     imageSrc: "/img/icons/meeting.png",
     imageAlt: "Business icon",
-    imagePosition: "left"
+    imagePosition: "left",
+    marginRight: 20
   }
 ];
 
@@ -68,6 +71,8 @@ export const AgencySelection = ({ image, title, description, ctaText, ...props }
                 imageSrc={card.imageSrc}
                 imageAlt={card.imageAlt}
                 imagePosition={card.imagePosition}
+                index={i}
+                marginRight={card.marginRight}
               />
             );
           })}
