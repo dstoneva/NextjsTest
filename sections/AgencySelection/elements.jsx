@@ -8,6 +8,8 @@ export const StyledContainer = styled(({ height, ...props }) => <SectionContaine
   justify-content: center;
   width: 100%;
   height: auto;
+  margin: 2rem 0 2rem;
+  padding: 0 20px 0 20px;
 `;
 
 export const StyledTitle = styled((props) => <SectionHeading {...props} />)`
@@ -26,7 +28,7 @@ export const StyledDescription = styled((props) => <SectionSubheading {...props}
   margin-top: 0px;
   @media screen and (max-width: 768px) {
     font-size: 1rem;
-    line-height: 1.5rem
+    line-height: 1.5rem;
   }
 `;
 
@@ -46,7 +48,7 @@ export const StyledSectionContentContainer = styled(({ ...props }) => <SectionCo
   margin-top: 2rem;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   background: url("/img/background.png") no-repeat;
   background-size: contain;
   @media screen and (max-width: 1024px) {
@@ -58,4 +60,13 @@ export const StyledImageContainer = styled(({ ...props }) => <div {...props} />)
   height: 100%;
   display: flex;
   justify-content: center;
+`;
+
+export const StyledCardsContainer = styled(({ ...props }) => <div {...props} />)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+  margin: 1.25rem;
 `;

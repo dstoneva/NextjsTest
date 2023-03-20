@@ -7,7 +7,8 @@ import {
   StyledTitle,
   StyledDescription,
   StyledImageContainer,
-  StyledSectionContentContainer
+  StyledSectionContentContainer,
+  StyledCardsContainer
 } from "./elements";
 
 export const AgencySelection = ({ image, title, description, ctaText, ...props }) => {
@@ -21,13 +22,15 @@ export const AgencySelection = ({ image, title, description, ctaText, ...props }
         <StyledImageContainer>
           <Image src={image.src} alt={image.alt} width={image.width} height={image.height} priority={true} />
         </StyledImageContainer>
+        <StyledCardsContainer>
         <Card
           heading='Title'
-          text='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+          text='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci '
           imageSrc="/img/edit-tools.png"
           imageAlt="Tools icon"
           imagePosition="left"
         />
+        </StyledCardsContainer>
       </StyledSectionContentContainer>
     </StyledContainer>
   );
