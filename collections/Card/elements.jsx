@@ -16,7 +16,7 @@ export const StyledCardWrapper = styled(({ ...props }) => <div {...props} />)`
 `;
 
 export const StyledCardHeading = styled(({ ...props }) => <div {...props} />)`
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: bold;
   font-family: Poppins;
 
