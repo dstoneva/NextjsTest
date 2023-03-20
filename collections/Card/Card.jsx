@@ -7,7 +7,7 @@ export const Card = ({ heading, text, imageSrc, imageAlt, imageWidth, imageHeigh
         <StyledCardImage src={imageSrc} alt={imageAlt} width={imageWidth} height={imageHeight} position={imagePosition}/>
       )}
       <StyledCardTextWrapper>
-        <StyledCardHeading>{heading}</StyledCardHeading>
+        <StyledCardHeading className="CardHeading">{heading}</StyledCardHeading>
         <StyledCardText>{text}</StyledCardText>
       </StyledCardTextWrapper>
       {imageSrc && imagePosition === "rigth" && (

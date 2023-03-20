@@ -9,11 +9,16 @@ export const StyledCardWrapper = styled(({ ...props }) => <div {...props} />)`
   width: calc(100% - ${(props) => props.marginRight}px);
   padding: 10px 30px 10px 30px;
   cursor: default;
-  
+
   &:hover,
   &:focus,
   &:active {
     outline: 2px solid ${({ theme }) => theme.main};
+  }
+
+  &:hover .CardHeading {
+    text-decoration: underline;
+    color: ${({ theme }) => theme.main};
   }
 `;
 
