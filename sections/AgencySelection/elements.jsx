@@ -46,7 +46,7 @@ export const StyledSectionContentContainer = styled(({ ...props }) => <SectionCo
   margin-top: 2rem;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   background: url("/img/background.png") no-repeat;
   background-size: contain;
   @media screen and (max-width: 1024px) {
