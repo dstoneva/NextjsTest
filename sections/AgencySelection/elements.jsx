@@ -15,11 +15,19 @@ export const StyledTitle = styled((props) => <SectionHeading {...props} />)`
   text-align: center;
   margin-bottom: 0px;
   line-height: 3rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 `;
 
 export const StyledDescription = styled((props) => <SectionSubheading {...props} />)`
   text-align: center;
   margin-top: 0px;
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.5rem
+  }
 `;
 
 export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
