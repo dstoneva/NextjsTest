@@ -1,4 +1,4 @@
-import { StyledCardWrapper, StyledCardHeading, StyledCardTextWrapper, StyledCardText, StyledCardImage, StyledImageContainer } from "./elements";
+import { StyledCardWrapper, StyledCardHeading, StyledCardTextWrapper, StyledCardText, StyledImageContainer } from "./elements";
 import Image from "next/image";
 
 export const Card = ({ heading, text, imageSrc, imageAlt, imageWidth, imageHeight, imagePosition, index, marginRight, ...props }) => {
