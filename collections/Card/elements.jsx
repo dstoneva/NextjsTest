@@ -8,15 +8,21 @@ export const StyledCardWrapper = styled(({ ...props }) => <div {...props} />)`
   width: 45%;
   margin: 1rem;
   padding: 10px 30px 10px 30px;
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     outline: 2px solid ${({ theme }) => theme.main};
   }
 `;
 
 export const StyledCardHeading = styled(({ ...props }) => <div {...props} />)`
-  font-size: 18px;
+  font-size: 1.25rem;
   font-weight: bold;
   font-family: Poppins;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 export const StyledCardTextWrapper = styled(({ ...props }) => <div {...props} />)`
@@ -26,16 +32,20 @@ export const StyledCardTextWrapper = styled(({ ...props }) => <div {...props} />
 `;
 
 export const StyledCardText = styled(({ ...props }) => <div {...props} />)`
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Poppins;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.875rem;
+  }
 `;
 
 export const StyledCardImage = styled.img.attrs(({ ...props }) => ({
-    width: props.width || "45px",
-    height: props.height || "45px"
-  }))`
-    width: ${(props) => props.width};
-    height: ${(props) => props.height};
-    margin-left: ${(props) => (props.position === "right" ? "30px" : 0)};
-    margin-right: ${(props) => (props.position === "left" ? "30px" : 0)};
-  `;
+  width: props.width || "40px",
+  height: props.height || "40px"
+}))`
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+  margin-left: ${(props) => (props.position === "right" ? "30px" : 0)};
+  margin-right: ${(props) => (props.position === "left" ? "30px" : 0)};
+`;
