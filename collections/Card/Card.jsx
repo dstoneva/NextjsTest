@@ -2,9 +2,7 @@ import { StyledCardWrapper, StyledCardHeading, StyledCardTextWrapper, StyledCard
 import Image from "next/image";
 
 export const Card = ({ heading, text, image, index, marginRight, ...props }) => {
-    console.log(image)
   return (
-    
     <StyledCardWrapper {...props} index={index} style={{ marginRight: marginRight }}>
       {image && image.position === "left" && (
         <StyledImageContainer>
