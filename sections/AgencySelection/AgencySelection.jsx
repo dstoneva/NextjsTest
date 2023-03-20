@@ -19,7 +19,8 @@ const cardsData = [
         Complete <strong>brief writing or simple guidance</strong> on what to include, we&apos;ve got you covered
       </div>
     ),
-    image: { src: "/img/icons/edit-tools.png", alt: "Tools icon", position: "left", marginRight: 60 }
+    image: { src: "/img/icons/edit-tools.png", alt: "Tools icon", position: "left" },
+    marginRight: 60
   },
   {
     heading: "Search",
@@ -30,7 +31,6 @@ const cardsData = [
     ),
     image: { src: "/img/icons/business.png", alt: "Business icon", position: "left" },
     marginRight: 40,
-    textDecoration: "underline"
   },
   {
     heading: "Pitch",
