@@ -19,10 +19,7 @@ const cardsData = [
         Complete <strong>brief writing or simple guidance</strong> on what to include, we&apos;ve got you covered
       </div>
     ),
-    imageSrc: "/img/icons/edit-tools.png",
-    imageAlt: "Tools icon",
-    imagePosition: "left",
-    marginRight: 60
+    image: { src: "/img/icons/edit-tools.png", alt: "Tools icon", position: "left", marginRight: 60 }
   },
   {
     heading: "Search",
@@ -31,10 +28,9 @@ const cardsData = [
         In-depth agency search covering; <strong>criteria matching</strong>, door knocking and due dilligence vetting.
       </div>
     ),
-    imageSrc: "/img/icons/business.png",
-    imageAlt: "Business icon",
-    imagePosition: "left",
-    marginRight: 40
+    image: { src: "/img/icons/business.png", alt: "Business icon", position: "left" },
+    marginRight: 40,
+    textDecoration: "underline"
   },
   {
     heading: "Pitch",
@@ -43,9 +39,7 @@ const cardsData = [
         Coperhensive <strong>pitch management</strong>, including comms, diary management and pitch hosting.
       </div>
     ),
-    imageSrc: "/img/icons/meeting.png",
-    imageAlt: "Business icon",
-    imagePosition: "left",
+    image: { src: "/img/icons/meeting.png", alt: "Business icon", position: "left" },
     marginRight: 20
   }
 ];
@@ -68,9 +62,7 @@ export const AgencySelection = ({ image, title, description, ctaText, ...props }
                 key={i}
                 heading={card.heading}
                 text={card.text}
-                imageSrc={card.imageSrc}
-                imageAlt={card.imageAlt}
-                imagePosition={card.imagePosition}
+                image={card.image}
                 index={i}
                 marginRight={card.marginRight}
               />
