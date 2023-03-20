@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SectionContainer, SectionHeading, SectionSubheading, SectionContentContainer } from "~/components";
+import { SectionContainer, SectionHeading, SectionSubheading } from "~/components";
 
 export const StyledContainer = styled(({ height, ...props }) => <SectionContainer {...props} />)`
   align-items: center;
@@ -42,7 +42,10 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   align-items: center;
 `;
 
-export const StyledSectionContentContainer = styled(({ ...props }) => <SectionContentContainer {...props} />)`
+export const StyledSectionContentContainer = styled(({ ...props }) => <div {...props} />)`
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
   flex-direction: row;
   margin-top: 2rem;
   justify-content: center;
