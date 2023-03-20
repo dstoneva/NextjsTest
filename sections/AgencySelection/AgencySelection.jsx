@@ -52,7 +52,7 @@ const cardsData = [
 
 export const AgencySelection = ({ image, title, description, ctaText, ...props }) => {
   return (
-    <StyledContainer {...props}>
+    <StyledContainer {...props} topMargin={4} bottomMargin={4}>
       <StyledTextContainer>
         <StyledTitle>{title}</StyledTitle>
         <StyledDescription>{description}</StyledDescription>
