@@ -4,16 +4,15 @@ export const StyledCardWrapper = styled(({ ...props }) => <div {...props} />)`
   display: flex;
   align-items: center;
   border-radius: 6px;
-  background: ${({ theme }) => theme.grayF4};
-  margin-right: ${(props) => props.marginRight}px;
-  width: calc(100% - ${(props) => props.marginRight}px);
-  padding: 10px 30px 10px 30px;
+  background: ${({ background, theme }) => background || theme.grayF4};
+  max-width: 100%;
+  padding: 10px 30px;
   cursor: default;
 
   &:hover,
   &:focus,
   &:active {
-    outline: 2px solid ${({ theme }) => theme.blue};
+    outline: 2px solid ${({ theme, borderColor }) => borderColor || theme.blue};
   }
 
   &:hover .CardHeading {
