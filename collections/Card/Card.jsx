@@ -23,7 +23,7 @@ export const Card = ({ heading, text, image, index, marginRight, href, ...props 
         </StyledImageContainer>
       )}
       <StyledCardTextWrapper position={image.position}>
-        <StyledCardHeading as={as || 'h2'} href={href} className='CardHeading'>
+        <StyledCardHeading href={href} className='CardHeading'>
           {heading}
         </StyledCardHeading>
         <StyledCardText>{text}</StyledCardText>
