@@ -69,6 +69,11 @@ export const AgencySelection = ({ image, title, description, backgroundUrl, ...p
                 index={i}
                 marginRight={card.marginRight}
                 href={card.href}
+                borderRadius={6}
+                background={"#F4F4F4"}
+                borderColor={"#0070f3"}
+                padding={"10px 30px"}
+                hoverStyles={"text-decoration: underline; color: #0070f3"}
               />
             );
           })}

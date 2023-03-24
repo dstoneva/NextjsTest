@@ -41,7 +41,7 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   align-items: center;
 `;
 
-export const StyledSectionContentContainer = styled(({ ...props }) => <div {...props} />)`
+export const StyledSectionContentContainer = styled(({ backgroundUrl, ...props }) => <div {...props} />)`
   display: flex;
   max-width: 1200px;
   width: 100%;
@@ -50,7 +50,7 @@ export const StyledSectionContentContainer = styled(({ ...props }) => <div {...p
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  background: url(${(props) => props.backgroundUrl}) no-repeat;
+  background: url(${({ backgroundUrl }) => backgroundUrl }) no-repeat;
   background-size: contain;
   @media screen and (max-width: 1024px) {
     flex-direction: column;
