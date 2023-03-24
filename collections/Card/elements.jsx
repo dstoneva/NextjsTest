@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 export const StyledCardWrapper = styled(
-  ({ borderRadius = 6, background, padding, borderColor, hoverStyles, ...props }) => <div {...props} />
+  ({ borderRadius = 6, background, padding, borderOnHover, hoverStyles, ...props }) => <div {...props} />
 )`
   display: flex;
   align-items: center;
@@ -15,7 +15,7 @@ export const StyledCardWrapper = styled(
   &:hover,
   &:focus,
   &:active {
-    outline: 2px solid ${({ borderColor }) => borderColor};
+    outline: ${({ borderOnHover }) => borderOnHover};
   }
 
   &:hover .CardHeading {

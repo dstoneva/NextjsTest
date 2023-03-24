@@ -17,7 +17,7 @@ export const Card = ({
   borderRadius,
   background,
   padding,
-  borderColor,
+  borderOnHover,
   hoverStyles,
   ...props
 }) => {
@@ -28,7 +28,7 @@ export const Card = ({
       borderRadius={borderRadius}
       background={background}
       padding={padding}
-      borderColor={borderColor}
+      borderOnHover={borderOnHover}
       hoverStyles={hoverStyles}
       style={{ marginRight: marginRight }}
     >
