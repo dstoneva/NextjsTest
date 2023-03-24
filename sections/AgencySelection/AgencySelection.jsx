@@ -21,7 +21,7 @@ const cardsData = [
     ),
     image: { src: "/img/icons/edit-tools.png", alt: "Tools icon", position: "left" },
     marginRight: 60,
-    href: "#"
+    href: "https://goodbrief.io/"
   },
   {
     heading: "Search",

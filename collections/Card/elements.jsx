@@ -53,7 +53,7 @@ export const StyledCardHeading = ({ href, children, ...rest }) => {
   if (isLink) {
     return (
       <Link href={href} passHref>
-        <StyledCardHeadingLink>
+        <StyledCardHeadingLink target="_blank">
           <CardHeading {...rest}>{children}</CardHeading>
         </StyledCardHeadingLink>
       </Link>
