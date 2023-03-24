@@ -48,19 +48,27 @@ const StyledCardHeadingLink = styled.a`
 `;
 
 export const StyledCardHeading = ({ href, children, ...rest }) => {
-  const isLink = !!href;
+  const isExternal = !href.startsWith("/") && !href.startsWith("#");
 
-  if (isLink) {
+  if (href && !isExternal) {
     return (
       <Link href={href} passHref>
-        <StyledCardHeadingLink target="_blank">
+        <StyledCardHeadingLink>
           <CardHeading {...rest}>{children}</CardHeading>
         </StyledCardHeadingLink>
       </Link>
     );
   }
 
-  return <CardHeading {...rest}>{children}</CardHeading>;
+  return (
+    <StyledCardHeadingLink
+      href={href}
+      target={isExternal ? "_blank" : null}
+      rel={isExternal ? "noopener noreferrer" : null}
+    >
+      <CardHeading {...rest}>{children}</CardHeading>
+    </StyledCardHeadingLink>
+  );
 };
 
 export const StyledCardText = styled(({ ...props }) => <div {...props} />)`
