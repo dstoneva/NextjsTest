@@ -1,24 +1,25 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-export const StyledCardWrapper = styled(({ ...props }) => <div {...props} />)`
+export const StyledCardWrapper = styled(
+  ({ borderRadius = 6, background, padding, borderColor, hoverStyles, ...props }) => <div {...props} />
+)`
   display: flex;
   align-items: center;
-  border-radius: ${({ borderRadius }) => borderRadius || "6px"};
-  background: ${({ background, theme }) => background || theme.grayF4};
+  border-radius: ${({ borderRadius }) => borderRadius}px;
+  background: ${({ background }) => background};
   max-width: 100%;
-  padding: ${({ padding }) => padding || "10px 30px"};
+  padding: ${({ padding }) => padding};
   cursor: default;
 
   &:hover,
   &:focus,
   &:active {
-    outline: 2px solid ${({ theme, borderColor }) => borderColor || theme.blue};
+    outline: 2px solid ${({ borderColor }) => borderColor};
   }
 
   &:hover .CardHeading {
-    text-decoration: underline;
-    color: ${({ theme }) => theme.blue};
+    ${({ hoverStyles }) => hoverStyles}
   }
 `;
 
@@ -74,7 +75,7 @@ export const StyledCardHeading = ({ href, children, ...rest }) => {
 export const StyledCardText = styled(({ ...props }) => <div {...props} />)`
   font-size: 1rem;
   margin: 0;
-  font-family: Poppins;
+  font-family: "Poppins";
 
   @media screen and (max-width: 768px) {
     font-size: 0.875rem;

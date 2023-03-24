@@ -7,9 +7,31 @@ import {
 } from "./elements";
 import Image from "next/image";
 
-export const Card = ({ heading, text, image, index, marginRight, href, ...props }) => {
+export const Card = ({
+  heading,
+  text,
+  image,
+  index,
+  marginRight,
+  href,
+  borderRadius,
+  background,
+  padding,
+  borderColor,
+  hoverStyles,
+  ...props
+}) => {
   return (
-    <StyledCardWrapper {...props} index={index} style={{ marginRight: marginRight }}>
+    <StyledCardWrapper
+      {...props}
+      index={index}
+      borderRadius={borderRadius}
+      background={background}
+      padding={padding}
+      borderColor={borderColor}
+      hoverStyles={hoverStyles}
+      style={{ marginRight: marginRight }}
+    >
       {image && image.position === "left" && (
         <StyledImageContainer>
           <Image
@@ -23,9 +45,7 @@ export const Card = ({ heading, text, image, index, marginRight, href, ...props 
         </StyledImageContainer>
       )}
       <StyledCardTextWrapper position={image.position}>
-        <StyledCardHeading href={href} className='CardHeading'>
-          {heading}
-        </StyledCardHeading>
+        <StyledCardHeading href={href} className="CardHeading">{heading}</StyledCardHeading>
         <StyledCardText>{text}</StyledCardText>
       </StyledCardTextWrapper>
       {image && image.position === "right" && (
