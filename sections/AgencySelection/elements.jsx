@@ -41,7 +41,7 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   align-items: center;
 `;
 
-export const StyledSectionContentContainer = styled(({ backgroundUrl, ...props }) => <div {...props} />)`
+export const StyledSectionContentContainer = styled(({ backgroundUrl = "", ...props }) => <div {...props} />)`
   display: flex;
   max-width: 1200px;
   width: 100%;
