@@ -50,7 +50,7 @@ export const StyledSectionContentContainer = styled(({ ...props }) => <div {...p
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  background: url("/img/background.png") no-repeat;
+  background: url(${(props) => props.backgroundUrl}) no-repeat;
   background-size: contain;
   @media screen and (max-width: 1024px) {
     flex-direction: column;

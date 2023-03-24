@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import Link from 'next/link';
 
 export const StyledCardWrapper = styled(({ ...props }) => <div {...props} />)`
   display: flex;
   align-items: center;
-  border-radius: 6px;
+  border-radius: ${({ borderRadius }) => borderRadius || '6px'};
   background: ${({ background, theme }) => background || theme.grayF4};
   max-width: 100%;
-  padding: 10px 30px;
+  padding: ${({ padding }) => padding || '10px 30px'};
   cursor: default;
 
   &:hover,
@@ -17,7 +18,7 @@ export const StyledCardWrapper = styled(({ ...props }) => <div {...props} />)`
 
   &:hover .CardHeading {
     text-decoration: underline;
-    color: ${({ theme }) => theme.main};
+    color: ${({ theme }) => theme.blue};
   }
 `;
 
@@ -29,7 +30,7 @@ export const StyledCardTextWrapper = styled(({ ...props }) => <div {...props} />
   margin-right: ${(props) => (props.position === "right" ? "30px" : 0)};
 `;
 
-export const StyledCardHeading = styled(({ ...props }) => <h2 {...props} />)`
+const CardHeading = styled(({ as: Component = 'h2', ...props }) => <Component {...props} />)`
   font-size: 1.125rem;
   margin: 0;
   font-weight: bold;
@@ -39,6 +40,28 @@ export const StyledCardHeading = styled(({ ...props }) => <h2 {...props} />)`
     font-size: 1rem;
   }
 `;
+
+const StyledCardHeadingLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+`;
+
+export const StyledCardHeading = ({ as, href, children, ...rest }) => {
+  const isLink = !!href;
+
+  if (isLink) {
+    return (
+      <Link href={href} passHref>
+        <StyledCardHeadingLink>
+          <CardHeading as={as} {...rest}>{children}</CardHeading>
+        </StyledCardHeadingLink>
+      </Link>
+    );
+  }
+
+  return <CardHeading as={as} {...rest}>{children}</CardHeading>;
+}
 
 export const StyledCardText = styled(({ ...props }) => <div {...props} />)`
   font-size: 1rem;

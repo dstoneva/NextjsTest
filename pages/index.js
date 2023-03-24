@@ -11,6 +11,7 @@ const agencySelectionProps = {
   image: { src: "/img/video.png" , alt: "", width: 300, height: 450, objectFit: "contain"},
   title: "Managed agency selection",
   description: "Strengthen your onboarding process",
+  backgroundUrl: "/img/background.png"
 }
 
 export default function Home() {

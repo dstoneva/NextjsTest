@@ -20,7 +20,8 @@ const cardsData = [
       </div>
     ),
     image: { src: "/img/icons/edit-tools.png", alt: "Tools icon", position: "left" },
-    marginRight: 60
+    marginRight: 60,
+    href: "#"
   },
   {
     heading: "Search",
@@ -31,6 +32,7 @@ const cardsData = [
     ),
     image: { src: "/img/icons/business.png", alt: "Business icon", position: "left" },
     marginRight: 40,
+    href: "#"
   },
   {
     heading: "Pitch",
@@ -40,18 +42,19 @@ const cardsData = [
       </div>
     ),
     image: { src: "/img/icons/meeting.png", alt: "Business icon", position: "left" },
-    marginRight: 20
+    marginRight: 20,
+    href: "#"
   }
 ];
 
-export const AgencySelection = ({ image, title, description, ctaText, ...props }) => {
+export const AgencySelection = ({ image, title, description, backgroundUrl, ...props }) => {
   return (
     <StyledContainer {...props} topMargin={4} bottomMargin={4}>
       <StyledTextContainer>
         <StyledTitle>{title}</StyledTitle>
         <StyledDescription>{description}</StyledDescription>
       </StyledTextContainer>
-      <StyledSectionContentContainer>
+      <StyledSectionContentContainer backgroundUrl={backgroundUrl}>
         <StyledImageContainer>
           <Image src={image.src} alt={image.alt} width={image.width} height={image.height} priority={true} />
         </StyledImageContainer>
@@ -65,6 +68,7 @@ export const AgencySelection = ({ image, title, description, ctaText, ...props }
                 image={card.image}
                 index={i}
                 marginRight={card.marginRight}
+                href={card.href}
               />
             );
           })}
