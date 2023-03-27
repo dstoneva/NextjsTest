@@ -95,6 +95,6 @@ export const StyledImageContainer = styled(({ position = "right", ...props }) =>
   max-height: 2.5rem;
   width: 100%;
   height: 100%;
-  margin-left: ${({ position }) => (position === "right" ? "40px" : 0)};
-  margin-right: ${({ position }) => (position === "left" ? "40px" : 0)};
+  margin-left: ${({ position }) => (position === "right" ? "30px" : 0)};
+  margin-right: ${({ position }) => (position === "left" ? "30px" : 0)};
 `;
