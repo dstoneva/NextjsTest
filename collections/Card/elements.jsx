@@ -80,7 +80,13 @@ export const StyledCardHeading = ({ href, children, ...rest }) => {
   );
 };
 
-export const StyledCardText = styled(({ ...props }) => <div {...props} />)`
+export const StyledCardText = styled(({ text = "", ...props }) => (
+  <p {...props}>
+    {text.split(/\*\*(.*?)\*\*/).map((item, index) => {
+      return index % 2 === 0 ? <span key={index}>{item}</span> : <strong key={index}>{item}</strong>;
+    })}
+  </p>
+))`
   font-size: 1rem;
   margin: 0;
   font-family: "Poppins";

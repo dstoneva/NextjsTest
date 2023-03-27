@@ -46,7 +46,7 @@ export const Card = ({
       )}
       <StyledCardTextWrapper>
         <StyledCardHeading href={href} className="CardHeading">{heading}</StyledCardHeading>
-        <StyledCardText>{text}</StyledCardText>
+        <StyledCardText text={text}/>
       </StyledCardTextWrapper>
     </StyledCardWrapper>
   );

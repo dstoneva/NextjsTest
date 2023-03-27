@@ -14,33 +14,21 @@ import {
 const cardsData = [
   {
     heading: "Brief",
-    text: (
-      <div>
-        Complete <strong>brief writing or simple guidance</strong> on what to include, we&apos;ve got you covered
-      </div>
-    ),
+    text: "Complete **brief writing or simple guidance** on what to include, we've got you covered",
     image: { src: "/img/icons/edit-tools.png", alt: "Tools icon", position: "left" },
     marginRight: 60,
     href: "https://goodbrief.io/"
   },
   {
     heading: "Search",
-    text: (
-      <div>
-        In-depth agency search covering; <strong>criteria matching</strong>, door knocking and due dilligence vetting.
-      </div>
-    ),
+    text: "In-depth agency search covering; **criteria matching**, door knocking and due dilligence vetting.",
     image: { src: "/img/icons/business.png", alt: "Business icon", position: "left" },
     marginRight: 40,
     href: "#"
   },
   {
     heading: "Pitch",
-    text: (
-      <div>
-        Coperhensive <strong>pitch management</strong>, including comms, diary management and pitch hosting.
-      </div>
-    ),
+    text: "Coperhensive **pitch management**, including comms, diary management and pitch hosting.",
     image: { src: "/img/icons/meeting.png", alt: "Business icon", position: "left" },
     marginRight: 20,
     href: "#"
