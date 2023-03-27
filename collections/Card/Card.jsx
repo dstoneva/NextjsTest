@@ -30,7 +30,7 @@ export const Card = ({
       padding={padding}
       borderOnHover={borderOnHover}
       hoverStyles={hoverStyles}
-      style={{ marginRight: marginRight }}
+      marginRight={marginRight}
     >
       {image && image.position === "left" && (
         <StyledImageContainer>

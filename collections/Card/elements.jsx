@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 export const StyledCardWrapper = styled(
-  ({ borderRadius = 6, background, padding, borderOnHover, hoverStyles, ...props }) => <div {...props} />
+  ({ borderRadius = 6, background, padding, borderOnHover, hoverStyles, marginRight, ...props }) => <div {...props} />
 )`
   display: flex;
   align-items: center;
@@ -10,6 +10,7 @@ export const StyledCardWrapper = styled(
   background: ${({ background }) => background};
   max-width: 100%;
   padding: ${({ padding }) => padding};
+  margin-right: ${({ marginRight }) => marginRight}px;
   cursor: default;
 
   &:hover,
