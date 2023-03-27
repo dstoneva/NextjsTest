@@ -2,9 +2,18 @@ import styled from "styled-components";
 import Link from "next/link";
 
 export const StyledCardWrapper = styled(
-  ({ borderRadius = 6, background, padding, borderOnHover, hoverStyles, marginRight, ...props }) => <div {...props} />
+  ({
+    borderRadius = 6,
+    background = "#eeeeee",
+    padding = "10px",
+    borderOnHover = "none",
+    hoverStyles = "color: #4492f9",
+    marginRight = 0,
+    ...props
+  }) => <div {...props} />
 )`
   display: flex;
+  flex-direction: ${(props) => (props.position === "right" ? "row-reverse" : "row")};
   align-items: center;
   border-radius: ${({ borderRadius }) => borderRadius}px;
   background: ${({ background }) => background};
@@ -28,8 +37,6 @@ export const StyledCardTextWrapper = styled(({ ...props }) => <div {...props} />
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: ${(props) => (props.position === "left" ? "30px" : 0)};
-  margin-right: ${(props) => (props.position === "right" ? "30px" : 0)};
 `;
 
 const CardHeading = styled(({ ...props }) => <h2 {...props} />)`
@@ -83,9 +90,11 @@ export const StyledCardText = styled(({ ...props }) => <div {...props} />)`
   }
 `;
 
-export const StyledImageContainer = styled(({ ...props }) => <div {...props} />)`
+export const StyledImageContainer = styled(({ position = "right", ...props }) => <div {...props} />)`
   max-width: 2.5rem;
   max-height: 2.5rem;
   width: 100%;
   height: 100%;
+  margin-left: ${({ position }) => (position === "right" ? "40px" : 0)};
+  margin-right: ${({ position }) => (position === "left" ? "40px" : 0)};
 `;

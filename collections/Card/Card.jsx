@@ -31,35 +31,23 @@ export const Card = ({
       borderOnHover={borderOnHover}
       hoverStyles={hoverStyles}
       marginRight={marginRight}
+      position={image ? image.position : null}
     >
-      {image && image.position === "left" && (
-        <StyledImageContainer>
+      {image && (
+        <StyledImageContainer position={image.position}>
           <Image
             layout='responsive'
             src={image.src}
             alt={image.alt ? image.alt : "Icon"}
             width={image.width ? image.width : "40px"}
             height={image.height ? image.height : "40px"}
-            position={image.position}
           />
         </StyledImageContainer>
       )}
-      <StyledCardTextWrapper position={image.position}>
+      <StyledCardTextWrapper>
         <StyledCardHeading href={href} className="CardHeading">{heading}</StyledCardHeading>
         <StyledCardText>{text}</StyledCardText>
       </StyledCardTextWrapper>
-      {image && image.position === "right" && (
-        <StyledImageContainer>
-          <Image
-            layout='responsive'
-            src={image.src}
-            alt={image.alt ? image.alt : "Icon"}
-            width={image.width ? image.width : "40px"}
-            height={image.height ? image.height : "40px"}
-            position={image.position}
-          />
-        </StyledImageContainer>
-      )}
     </StyledCardWrapper>
   );
 };
